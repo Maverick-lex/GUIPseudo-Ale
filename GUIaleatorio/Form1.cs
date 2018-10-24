@@ -26,7 +26,7 @@ namespace GUIaleatorio
             Application.Exit();
         }
         /*
-         * botones borrados
+         * botones borrados minimzar y maximizar
         private void bbnMaximizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
