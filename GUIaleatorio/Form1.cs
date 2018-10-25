@@ -19,14 +19,13 @@ namespace GUIaleatorio
             InitializeComponent();
         }
 
-        
 
         private void bbnCerrar_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
         /*
-         * botones borrados minimzar y maximizar
+         * botones borrados minimzar y maximizar no funcionan bien
         private void bbnMaximizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
