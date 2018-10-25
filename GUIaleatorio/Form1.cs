@@ -32,7 +32,7 @@ namespace GUIaleatorio
             bbnMaximizar.Visible = false;
             bbnRestaurar.Visible = true;
         }
-
+        boton de restaurar oculto
         private void bbnRestaurar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Normal;
