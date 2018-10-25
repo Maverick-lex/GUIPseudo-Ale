@@ -26,6 +26,7 @@ namespace GUIaleatorio
         }
         /*
          * botones borrados minimzar y maximizar no funcionan bien
+         * boton maximimzar su animacion no s eve bien
         private void bbnMaximizar_Click(object sender, EventArgs e)
         {
             this.WindowState = FormWindowState.Maximized;
