@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Programa hecho para esis-unjbg codigo de estudiante: 2015-119046
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
