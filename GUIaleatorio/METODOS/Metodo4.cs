@@ -40,9 +40,9 @@ namespace GUIaleatorio.METODOS
             R = new decimal[1100];
             decimal promedio = 0;
             int fin = int.Parse(iteracion.Text);
-            if (fin > 100)
+            if (fin > 1000)
             {
-                MessageBox.Show("Máximo pedir 100 resultados");
+                MessageBox.Show("Máximo pedir 1000 resultados");
                 iteracion.Clear();
                 return;
             }

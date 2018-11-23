@@ -52,7 +52,7 @@ namespace GUIaleatorio.METODOS
             R = new double[1100];
             double promedio = 0;
             int fin = int.Parse(iteracion.Text);
-            if (fin > 100)
+            if (fin > 1000)
             {
                 MessageBox.Show("Máximo pedir 100 resultados");
                 iteracion.Clear();

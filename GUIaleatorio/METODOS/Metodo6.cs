@@ -107,9 +107,9 @@ namespace GUIaleatorio.METODOS
             //MessageBox.Show(X[cont-1].ToString());
 
             int fin = int.Parse(iteracion.Text);
-            if (fin > 100)
+            if (fin > 1000)
             {
-                MessageBox.Show("Máximo pedir 100 resultados");
+                MessageBox.Show("Máximo pedir 1000 resultados");
                 iteracion.Clear();
                 return;
             }
