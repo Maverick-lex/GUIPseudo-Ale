@@ -99,7 +99,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 20);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Ver. 1.0";
+            this.label2.Text = "Ver. 2.0";
             // 
             // MessageboxForm
             // 

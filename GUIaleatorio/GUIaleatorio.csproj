@@ -70,6 +70,13 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="METODOS\encapsulamiento.cs" />
+    <Compile Include="METODOS\PruebaMedias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="METODOS\PruebaMedias.Designer.cs">
+      <DependentUpon>PruebaMedias.cs</DependentUpon>
+    </Compile>
     <Compile Include="METODOS\Metodo1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="METODOS\PruebaMedias.resx">
+      <DependentUpon>PruebaMedias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="METODOS\Metodo1.resx">
       <DependentUpon>Metodo1.cs</DependentUpon>

@@ -45,6 +45,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.semilla2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.PruebaM = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pantallaF)).BeginInit();
             this.SuspendLayout();
             // 
@@ -150,6 +151,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.semilla1.Location = new System.Drawing.Point(295, 222);
+            this.semilla1.MaxLength = 4;
             this.semilla1.Name = "semilla1";
             this.semilla1.Size = new System.Drawing.Size(140, 20);
             this.semilla1.TabIndex = 16;
@@ -203,6 +205,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.semilla2.Location = new System.Drawing.Point(295, 286);
+            this.semilla2.MaxLength = 4;
             this.semilla2.Name = "semilla2";
             this.semilla2.Size = new System.Drawing.Size(140, 20);
             this.semilla2.TabIndex = 24;
@@ -219,9 +222,23 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(359, 366);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(76, 18);
+            this.label4.Size = new System.Drawing.Size(85, 18);
             this.label4.TabIndex = 26;
-            this.label4.Text = "Max. 100";
+            this.label4.Text = "Max. 1000";
+            // 
+            // PruebaM
+            // 
+            this.PruebaM.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PruebaM.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.PruebaM.Location = new System.Drawing.Point(465, 511);
+            this.PruebaM.Name = "PruebaM";
+            this.PruebaM.Size = new System.Drawing.Size(140, 40);
+            this.PruebaM.TabIndex = 27;
+            this.PruebaM.Text = "Prueba de Medias";
+            this.PruebaM.UseVisualStyleBackColor = true;
+            this.PruebaM.Click += new System.EventHandler(this.PruebaM_Click);
             // 
             // Metodo2
             // 
@@ -229,6 +246,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(82)))));
             this.ClientSize = new System.Drawing.Size(1080, 615);
+            this.Controls.Add(this.PruebaM);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.semilla2);
@@ -265,5 +283,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Xi;
         private System.Windows.Forms.DataGridViewTextBoxColumn Ri;
         private System.Windows.Forms.Label label4;
+        public System.Windows.Forms.Button PruebaM;
     }
 }

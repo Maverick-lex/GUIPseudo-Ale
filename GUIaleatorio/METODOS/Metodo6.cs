@@ -72,25 +72,33 @@ namespace GUIaleatorio.METODOS
             var headerBounds = new Rectangle(e.RowBounds.Left, e.RowBounds.Top, grid.RowHeadersWidth, e.RowBounds.Height);
             e.Graphics.DrawString(rowIdx, this.Font, SystemBrushes.ControlText, headerBounds, centerFormat);
         }
-
+        encapsulamiento M6 = new encapsulamiento();
+        private bool presionarboton = false;
         private void generar_Click(object sender, EventArgs e)
         {
 
             pantallaF.Rows.Clear();
             pantallaF.Refresh();
+            presionarboton = true;
             if (string.IsNullOrEmpty(m.Text) || string.IsNullOrEmpty(iteracion.Text) || VectSeed.Rows.Count == 0)
             {
                 MessageBox.Show("Debe completar la informacion");
                 return;
             }
+            var cadena = semilla.Text;
+            if (cadena.Length < 4)
+            {
+                MessageBox.Show("El contenido del textbox debe de tener  4 caracteres", "Error");
+                return;
+            }
             int cont = 0;
             decimal[] X;
             decimal[] R;
-            X = new decimal[110];
-            R = new decimal[110];
-
-                //Recorre las filas..
-                foreach (DataGridViewRow fila in VectSeed.Rows)
+            X = new decimal[1100];
+            R = new decimal[1100];
+            decimal promedio = 0;
+            //Recorre las filas..
+            foreach (DataGridViewRow fila in VectSeed.Rows)
             {
                 String valor = fila.Cells[0].Value.ToString();
                 X[cont] = Convert.ToInt32(valor);
@@ -114,6 +122,19 @@ namespace GUIaleatorio.METODOS
                 pantallaF.Rows[n].Cells[0].Value = n + 1;
                 pantallaF.Rows[n].Cells[1].Value = X[i];
                 pantallaF.Rows[n].Cells[2].Value = R[i];
+                promedio = promedio + R[i];
+            }
+            promedio = promedio / fin;
+            M6.promedio = Convert.ToDouble(promedio);
+            M6.limInfe = 0.5 - (1.96 * (1 / Math.Sqrt(12 * fin)));
+            M6.limSupe = 0.5 + (1.96 * (1 / Math.Sqrt(12 * fin)));
+            if (M6.limInfe < M6.promedio && M6.promedio < M6.limSupe)
+            {
+                M6.resp = "ACEPTA";
+            }
+            else
+            {
+                M6.resp = "RECHAZA";
             }
         }
 
@@ -142,6 +163,24 @@ namespace GUIaleatorio.METODOS
         private void VectSeed_KeyDown(object sender, KeyEventArgs e)
         {
     
+        }
+
+        private void PruebaM_Click(object sender, EventArgs e)
+        {
+            if (presionarboton == true)
+            {
+                PruebaMedias PM6 = new PruebaMedias();
+                PM6.prom.Text = Convert.ToString(M6.promedio);
+                PM6.limInf.Text = Convert.ToString(M6.limInfe);
+                PM6.limSup.Text = Convert.ToString(M6.limSupe);
+                PM6.Respuesta.Text = M6.resp;
+                PM6.metodo.Text = "(CONGRUENCIAL ADITIVO)";
+                PM6.Show();
+            }
+            else
+            {
+                MessageBox.Show("Presione primero el boton GENERAR");
+            }
         }
     }
 }
