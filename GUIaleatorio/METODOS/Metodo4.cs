@@ -31,7 +31,7 @@ namespace GUIaleatorio.METODOS
             var cadena = semilla.Text;
             if (cadena.Length < 4)
             {
-                MessageBox.Show("El contenido del textbox debe de tener  4 caracteres", "Error");
+                MessageBox.Show("La semilla debe de tener 4 caracteres", "Error");
                 return;
             }
             decimal[] X;
